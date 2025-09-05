@@ -1,4 +1,3 @@
-
 [
   {
     "url": "articulos/capas-medias-el-corte-perfecto-.html",
@@ -6,5 +5,82 @@
     "title": "Capas Medias: ¡El Corte Perfecto!",
     "date": "2025-09-04",
     "summary": "¿Cansada de lo mismo? Las capas medias son tu respuesta! Este corte versátil rejuvenece, añade volumen y movimiento a tu cabello, ¡perfecto para cualquier ocasión! Descubre por qué es el corte perfecto para ti."
+  },
+  {
+    "url": "articulos/capas medias_ ¡volumen y estilo!.html",
+    "imageUrl": "https://subnp.com/api/image/ddb2607d-8d60-4697-b2c4-3948e3ecd502",
+    "title": "Capas Medias: ¡Volumen y Estilo!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de la belleza! ¿Cansada del mismo peinado de siempre? ¡Prepárate para darle un giro a tu look con las capas medias!"
+  },
+  {
+    "url": "articulos/capas perfectas_ ¡peinado mediano que te fascinará!.html",
+    "imageUrl": "https://subnp.com/api/image/b1753dda-21c3-44d5-bca5-b68179b92c72",
+    "title": "Capas Perfectas: ¡Peinado Mediano que te Fascinará!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de la belleza! ¿Cansada de llevar siempre el mismo peinado? Hoy te presentamos un corte mediano en capas que te fascinará por su versatilidad y estilo."
+  },
+  {
+    "url": "articulos/peinados 2025_ ¡el futuro de la moda capilar!.html",
+    "imageUrl": "https://subnp.com/api/image/382e091d-7ec0-4734-b90a-28f1b15bd9dd",
+    "title": "Peinados 2025: ¡El Futuro de la Moda Capilar!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de la belleza! ¿Preparadas para un viaje al futuro de la moda capilar? En PeinArte, te revelamos las tendencias en peinados para el 2025."
+  },
+  {
+    "url": "articulos/peinados 2025_ ¡el futuro es ahora!.html",
+    "imageUrl": "https://subnp.com/api/image/5388e4ce-a7c8-4774-b9e8-6c0858c63145",
+    "title": "Peinados 2025: ¡El futuro es ahora!",
+    "date": "2025-09-04",
+    "summary": "Prepárate para un viaje al futuro del estilo con las tendencias en peinados del 2025. Olvida lo convencional, ¡este año se trata de expresión audaz y creatividad sin límites!"
+  },
+  {
+    "url": "articulos/peinados de noche_ ¡deslumbra con estilo!.html",
+    "imageUrl": "https://subnp.com/api/image/231c57f8-6f51-4581-ade8-17ef52910680",
+    "title": "Peinados de Noche: ¡Deslumbra con Estilo!",
+    "date": "2025-09-04",
+    "summary": "Prepárate para brillar en tu próxima noche especial con un peinado que te hará sentir como una estrella de cine. Olvídate de lo complicado, te mostraremos un look sofisticado y fácil de lograr."
+  },
+  {
+    "url": "articulos/peinados de noche_ ¡elegancia radiante!.html",
+    "imageUrl": "https://subnp.com/api/image/c7a681ae-6202-4c0c-a9d2-09d8579c957c",
+    "title": "Peinados de Noche: ¡Elegancia Radiante!",
+    "date": "2025-09-04",
+    "summary": "Prepárate para deslumbrar en tu próxima noche especial con un peinado que te hará sentir radiante y segura. Olvida las preocupaciones y descubre un estilo elegante y sofisticado."
+  },
+  {
+    "url": "articulos/peinados ejecutivos_ ¡elegancia y poder!.html",
+    "imageUrl": "https://subnp.com/api/image/1b9e33a1-b7b8-423c-b9d7-f9f744ec8bb9",
+    "title": "Peinados ejecutivos: ¡Elegancia y poder!",
+    "date": "2025-09-04",
+    "summary": "En el mundo corporativo, tu imagen dice mucho. ¡Un peinado elegante y profesional puede marcar la diferencia! Descubre cómo lucir sofisticada y poderosa."
+  },
+  {
+    "url": "articulos/peinados elegante para mujeres_ ¡domina tu estilo!.html",
+    "imageUrl": "https://subnp.com/api/image/b1cbb4dc-aa74-475d-9c9e-d1b23f569656",
+    "title": "Peinados Elegante para Mujeres: ¡Domina tu estilo!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de la belleza! ¿Buscas un peinado elegante y profesional que te haga sentir segura y poderosa? ¡Estás en el lugar correcto!"
+  },
+  {
+    "url": "articulos/peinados profesionales_ ¡elegancia al instante!.html",
+    "imageUrl": "https://subnp.com/api/image/81fc7f47-d8f3-4420-842a-77c839a630eb",
+    "title": "Peinados Profesionales: ¡Elegancia al Instante!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de la elegancia profesional! ¿Buscas un peinado que te haga sentir segura y sofisticada en el trabajo o en cualquier evento importante?"
+  },
+  {
+    "url": "articulos/peinados sencillos_ ¡lista en minutos!.html",
+    "imageUrl": "https://subnp.com/api/image/7619bdff-dd41-47fb-add3-55c3dea615a5",
+    "title": "Peinados Sencillos: ¡Lista en Minutos!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de la belleza! ¿Buscas peinados fáciles y rápidos para lucir fabulosa todos los días? ¡Entonces estás en el lugar correcto!"
+  },
+  {
+    "url": "articulos/trenzas románticas_ ¡el peinado perfecto!.html",
+    "imageUrl": "https://subnp.com/api/image/9564313f-f3c6-4a4b-8805-c194c5c9af4f",
+    "title": "Trenzas Románticas: ¡El Peinado Perfecto!",
+    "date": "2025-09-04",
+    "summary": "Hola, amantes de los peinados! Hoy vamos a explorar el mundo del romanticismo con un peinado clásico y versátil: ¡las trenzas!"
   }
 ]
