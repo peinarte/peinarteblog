@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PeinArte | Blog de Peinados</title>
-    <!-- Incluye Tailwind CSS desde CDN para un diseño moderno y responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -18,10 +17,8 @@
     <!-- Encabezado del Blog -->
     <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <!-- Logo de PeinArte -->
             <a href="/" class="flex items-center space-x-2">
-                <!-- Por favor, renombra tu imagen a "peinarte-logo.png" en tu repositorio -->
-                <img src="peinarte-logo.png" alt="Logo de PeinArte" class="h-10 w-auto rounded-lg">
+                <img src="/peinarte-logo.png" alt="Logo de PeinArte" class="h-10 w-auto rounded-lg">
                 <span class="text-3xl font-bold text-gray-900">PeinArte</span>
             </a>
             <nav>
@@ -34,88 +31,88 @@
     <!-- Contenedor Principal de la Página de Inicio -->
     <main class="container mx-auto mt-10 px-4">
         
-        <!-- Banner Principal o Sección de Último Artículo -->
         <section class="mb-12">
             <div class="bg-purple-600 rounded-lg p-6 md:p-12 text-white text-center shadow-lg">
                 <h2 class="text-3xl md:text-4xl font-extrabold mb-3">Bienvenido a PeinArte</h2>
                 <p class="text-lg md:text-xl font-light mb-6">
                     Tu fuente de inspiración para los mejores peinados, tutoriales y tendencias de moda capilar.
                 </p>
-                <a href="articulos/peinados-2025-el-futuro-de-la-moda-capilar-.html" class="inline-block bg-white text-purple-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
-                    Leer nuestro último artículo
+                <a href="#" id="latest-article-link" class="inline-block bg-white text-purple-600 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">
+                    Cargando último artículo...
                 </a>
             </div>
         </section>
 
-        <!-- Sección de Artículos Recientes -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Tarjeta de Artículo 1 (Ejemplo) -->
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                <a href="articulos/peinados-2025-el-futuro-de-la-moda-capilar-.html">
-                    <img src="https://placehold.co/800x600/fce7f3/4a044e?text=PEINADO+2025" alt="Peinados 2025: El futuro de la moda capilar" class="w-full h-48 object-cover">
-                </a>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">
-                        <a href="articulos/peinados-2025-el-futuro-de-la-moda-capilar-.html" class="hover:text-purple-600">Peinados 2025: El futuro de la moda capilar</a>
-                    </h3>
-                    <p class="text-gray-600 text-sm">29 de Julio, 2025</p>
-                    <p class="text-gray-700 mt-4 text-base line-clamp-3">
-                        Descubre las tendencias que dominarán la industria de la belleza capilar en 2025. Desde cortes geométricos hasta colores vibrantes, te mostramos lo que viene.
-                    </p>
-                    <a href="articulos/peinados-2025-el-futuro-de-la-moda-capilar-.html" class="mt-4 inline-block text-purple-600 font-semibold hover:underline">
-                        Leer más &rarr;
-                    </a>
-                </div>
-            </div>
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold">Artículos Recientes</h2>
+        </section>
 
-            <!-- Tarjeta de Artículo 2 (Puedes añadir más aquí) -->
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                <a href="articulos/peinados-de-invierno.html">
-                    <img src="https://placehold.co/800x600/ede9fe/5b21b6?text=PEINADOS+INVIERNO" alt="Peinados de invierno" class="w-full h-48 object-cover">
-                </a>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">
-                        <a href="articulos/peinados-de-invierno.html" class="hover:text-purple-600">5 Peinados de Invierno que te harán brillar</a>
-                    </h3>
-                    <p class="text-gray-600 text-sm">15 de Julio, 2025</p>
-                    <p class="text-gray-700 mt-4 text-base line-clamp-3">
-                        Mantén tu estilo incluso en los días más fríos con estas ideas de peinados que combinan elegancia y protección.
-                    </p>
-                    <a href="articulos/peinados-de-invierno.html" class="mt-4 inline-block text-purple-600 font-semibold hover:underline">
-                        Leer más &rarr;
-                    </a>
-                </div>
-            </div>
-
-            <!-- Tarjeta de Artículo 3 (Puedes añadir más aquí) -->
-            <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
-                <a href="articulos/tutorial-trenzas-bohemias.html">
-                    <img src="https://placehold.co/800x600/f0f9ff/0c4a6e?text=TRENZAS+BOHEMIAS" alt="Tutorial de trenzas bohemias" class="w-full h-48 object-cover">
-                </a>
-                <div class="p-6">
-                    <h3 class="text-xl font-bold mb-2">
-                        <a href="articulos/tutorial-trenzas-bohemias.html" class="hover:text-purple-600">Tutorial: Trenzas Bohemias para cualquier ocasión</a>
-                    </h3>
-                    <p class="text-gray-600 text-sm">01 de Julio, 2025</p>
-                    <p class="text-gray-700 mt-4 text-base line-clamp-3">
-                        Aprende a crear trenzas bohemias y relajadas con nuestro tutorial paso a paso. ¡Perfecto para festivales o un día casual!
-                    </p>
-                    <a href="articulos/tutorial-trenzas-bohemias.html" class="mt-4 inline-block text-purple-600 font-semibold hover:underline">
-                        Leer más &rarr;
-                    </a>
-                </div>
-            </div>
-
+        <section id="articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Las tarjetas de artículos se generarán aquí por JavaScript -->
         </section>
     </main>
 
-    <!-- Pie de Página -->
     <footer class="bg-gray-800 text-white text-center py-8 mt-12">
         <div class="container mx-auto px-4">
             <p class="text-sm text-gray-400 mb-2">Como afiliado, gano con las compras que califican. Esto no tiene costo adicional para ti y apoya a PeinArte.</p>
             <p>&copy; 2024 PeinArte. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const articlesContainer = document.getElementById('articles-container');
+            const latestArticleLink = document.getElementById('latest-article-link');
+
+            const renderArticles = (articles) => {
+                articlesContainer.innerHTML = '';
+                articles.forEach(article => {
+                    const articleCard = `
+                        <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                            <a href="${article.url}">
+                                <img src="${article.imageUrl}" alt="${article.title}" class="w-full h-48 object-cover">
+                            </a>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold mb-2">
+                                    <a href="${article.url}" class="hover:text-purple-600">${article.title}</a>
+                                </h3>
+                                <p class="text-gray-600 text-sm">${new Date(article.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                                <p class="text-gray-700 mt-4 text-base line-clamp-3">${article.summary}</p>
+                                <a href="${article.url}" class="mt-4 inline-block text-purple-600 font-semibold hover:underline">
+                                    Leer más &rarr;
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    articlesContainer.innerHTML += articleCard;
+                });
+            };
+
+            const loadArticles = async () => {
+                try {
+                    const response = await fetch('/articles.json');
+                    const articles = await response.json();
+
+                    articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                    if (articles.length > 0) {
+                        latestArticleLink.href = articles[0].url;
+                        latestArticleLink.innerText = 'Leer nuestro último artículo';
+                    } else {
+                        latestArticleLink.innerText = 'No hay artículos aún';
+                    }
+                    
+                    renderArticles(articles);
+                } catch (error) {
+                    console.error('Error al cargar los artículos:', error);
+                    articlesContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los artículos. Por favor, asegúrate de que el archivo articles.json existe y es válido.</p>';
+                    latestArticleLink.innerText = 'Error al cargar artículos';
+                }
+            };
+
+            loadArticles();
+        });
+    </script>
 
 </body>
 </html>
