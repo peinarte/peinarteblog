@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Belleza - PeinArte</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="//style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body class="bg-gray-100 text-gray-800">
 
     <header class="bg-white shadow-sm py-4">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="#" class="flex items-center space-x-2">
+            <a href="/" class="flex items-center space-x-2">
                 <span class="text-3xl font-bold text-gray-900">PeinArte</span>
             </a>
             <nav>
-                <a href="#" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Blog</a>
+                <a href="/" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Blog</a>
                 <a href="https://numehair.com/paul-coronel" target="_blank" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Tienda Recomendada</a>
             </nav>
         </div>
@@ -41,8 +41,7 @@
                 <h2 class="text-2xl font-bold text-gray-900 mb-4">
                     Guía Paso a Paso
                 </h2>
-                <h1>Guía Paso a Paso para Capas Medias Perfectas</h1>
-<p>Antes de empezar, asegúrate de tener el cabello limpio y seco.  Puedes utilizar un protector térmico para minimizar el daño por calor.</p>
+                <p>Antes de empezar, asegúrate de tener el cabello limpio y seco.  Puedes utilizar un protector térmico para minimizar el daño por calor.</p>
 <p><b>Paso 1: La Consulta</b></p>
 <ul><li>Consulta con tu estilista para determinar el largo y el estilo de capas que mejor se adapten a la forma de tu rostro y textura de tu cabello.</li></ul>
 <p><b>Paso 2: El Corte</b></p>
@@ -86,6 +85,31 @@
             <p>&copy; 2025 PeinaArte. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!-- Botón Volver Arriba -->
+    <button id="back-to-top-btn" title="Volver arriba" class="hidden fixed bottom-5 right-5 p-3 bg-purple-600 text-white rounded-full shadow-lg hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-opacity duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const backToTopBtn = document.getElementById('back-to-top-btn');
+
+            window.onscroll = () => {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    backToTopBtn.classList.remove('hidden');
+                } else {
+                    backToTopBtn.classList.add('hidden');
+                }
+            };
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
 
 </body>
 </html>
