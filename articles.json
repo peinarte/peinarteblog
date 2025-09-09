@@ -1,1 +1,26 @@
-[{object},{object},{object},{object},{object},{object},{object},{object},{object},{object},{object},{object}]
+[
+  {
+    "title": "Peinados Profesionales: Elegancia al Instante",
+    "url": "https://peinarte.com/blog/peinados-profesionales-elegancia-al-instante.html",
+    "imageUrl": "https://subnp.com/api/image/5db96f44-9faa-4686-8790-485ed10c5fe3",
+    "date": "4 September, 2025"
+  },
+  {
+    "title": "¡Cabello Largo y Ondulado: ¡El Peinado Perfecto!",
+    "url": "https://peinarte.com/blog/cabello-largo-y-ondulado-el-peinado-perfecto.html",
+    "imageUrl": "https://subnp.com/api/image/e24e837f-8c3b-486a-aa85-b9e735165d70",
+    "date": "6 September, 2025"
+  },
+  {
+    "title": "¡Peinados de Noche que Deslumbran!",
+    "url": "https://peinarte.com/blog/peinados-de-noche-que-deslumbran.html",
+    "imageUrl": "https://subnp.com/api/image/c85d7751-64d8-4f24-9b2a-a9e99553538c",
+    "date": "6 September, 2025"
+  },
+  {
+    "title": "Capas Medias: ¡El Corte Perfecto!",
+    "url": "https://peinarte.com/blog/capas-medias-el-corte-perfecto.html",
+    "imageUrl": "https://subnp.com/api/image/621b162f-76c2-498c-9a4f-a99f36f6e80b",
+    "date": "6 September, 2025"
+  }
+]
