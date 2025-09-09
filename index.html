@@ -112,7 +112,7 @@
 
             const loadArticles = async () => {
                 try {
-                    const response = await fetch('/articles.json');
+                    const response = await fetch('articles.json');
                     const articles = await response.json();
 
                     articles.sort((a, b) => new Date(b.date) - new Date(a.date));
