@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeinArte | Peinados Fáciles para Todos los Días</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="/peinarteblog/index.html" class="flex items-center space-x-2">
+                <img src="../peinarte-logo.png" alt="Logo de PeinArte" class="h-10 w-auto rounded-lg">
+                <span class="text-3xl font-bold text-gray-900">PeinArte</span>
+            </a>
+            <nav>
+                <a href="/peinarteblog/index.html" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Blog</a>
+                <a href="https://numehair.com/paul-coronel" target="_blank" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Tienda</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-10 px-4">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-8">Peinados Fáciles para Todos los Días</h1>
+        <div id="category-articles-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Artículos de esta categoría se cargarán aquí -->
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <p class="text-sm text-gray-400 mb-2">Como afiliado, gano con las compras que califican. Esto no tiene costo adicional para ti y apoya a PeinArte.</p>
+            <p>&copy; 2024 PeinArte. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const categoryArticlesContainer = document.getElementById('category-articles-container');
+            const categoryName = "Peinados Fáciles para Todos los Días"; // This should match the category name
+
+            const renderArticleCard = (article) => {
+                return `
+                    <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
+                        <a href="../articulos/${article.filename}">
+                            <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover">
+                        </a>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">
+                                <a href="../articulos/${article.filename}" class="hover:text-purple-600">${article.title}</a>
+                            </h3>
+                            <p class="text-gray-600 text-sm">${new Date(article.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                            <p class="text-gray-700 mt-4 text-base line-clamp-3">${article.summary}</p>
+                            <a href="../articulos/${article.filename}" class="mt-4 inline-block text-purple-600 font-semibold hover:underline">
+                                Leer más &rarr;
+                            </a>
+                        </div>
+                    </div>
+                `;
+            };
+
+            const getArticleCategory = (title) => {
+                const titleLower = title.toLowerCase();
+                if (titleLower.includes("noche") || titleLower.includes("fiesta") || titleLower.includes("deslumbran") || titleLower.includes("elegancia irresistible") || titleLower.includes("elegancia radiante")) {
+                    return "Peinados de Noche y Fiesta";
+                } else if (titleLower.includes("elegante") || titleLower.includes("profesional") || titleLower.includes("ejecutivos") || titleLower.includes("trabajo") || titleLower.includes("negocios") || titleLower.includes("poderosa") || titleLower.includes("impecable")) {
+                    return "Peinados Elegantes y Profesionales";
+                } else if (titleLower.includes("fácil") || titleLower.includes("sencillos") || titleLower.includes("coleta") || titleLower.includes("moño") || titleLower.includes("día") || titleLower.includes("minutos")) {
+                    return "Peinados Fáciles para Todos los Días";
+                } else if (titleLower.includes("capas") || titleLower.includes("medias") || titleLower.includes("corte")) {
+                    return "Peinados Medianos en Capas";
+                } else if (titleLower.includes("largo") || titleLower.includes("trenzas")) {
+                    return "Peinados para Cabello Largo";
+                } else if (titleLower.includes("2025") || titleLower.includes("futuro") || titleLower.includes("moda capilar") || titleLower.includes("tendencias")) {
+                    return "Tendencias 2025 en Peinados";
+                } else {
+                    return "Otros";
+                }
+            };
+
+            try {
+                const response = await fetch('../articles.json');
+                const allArticles = await response.json();
+
+                const filteredArticles = allArticles.filter(article => getArticleCategory(article.title) === categoryName);
+
+                filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+                if (filteredArticles.length > 0) {
+                    filteredArticles.forEach(article => {
+                        categoryArticlesContainer.innerHTML += renderArticleCard(article);
+                    });
+                } else {
+                    categoryArticlesContainer.innerHTML = '<p class="text-center text-gray-600">No hay artículos en esta categoría aún.</p>';
+                }
+
+            } catch (error) {
+                console.error('Error al cargar los artículos de la categoría:', error);
+                categoryArticlesContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los artículos de esta categoría.</p>';
+            }
+        });
+    </script>
+
+</body>
+</html>
