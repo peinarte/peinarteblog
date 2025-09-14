@@ -4,7 +4,7 @@
   "description": "El sitio web de PeinArte Blog, con publicaciones gestionadas por Make.com",
   "main": "index.js",
   "scripts": {
-    "build": "echo 'Compilación de sitio exitosa.'"
+    "build": "node build-articles.js"
   },
   "author": "PeinArte",
   "license": "ISC"
