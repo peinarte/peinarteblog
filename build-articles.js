@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const articlesDir = path.join(__dirname, 'articles');
+const articlesDir = path.join(__dirname, 'articulos');
 const outputFile = path.join(__dirname, 'articles.json');
 
 fs.readdir(articlesDir, (err, files) => {
