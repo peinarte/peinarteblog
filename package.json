@@ -1,0 +1,11 @@
+{
+  "name": "peinarte-blog",
+  "version": "1.0.0",
+  "description": "El sitio web de PeinArte Blog, con publicaciones gestionadas por Make.com",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'Compilación de sitio exitosa.'"
+  },
+  "author": "PeinArte",
+  "license": "ISC"
+}
