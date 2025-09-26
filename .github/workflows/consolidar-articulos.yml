@@ -20,8 +20,9 @@ jobs:
           node-version: '20' # Puedes cambiar esto por la versión que necesites
           
       - name: Instalar dependencias
-        # Si tu script tiene dependencias de npm, descomenta y usa esta línea
-        # run: npm install
+        run: |
+          # Si tu script tiene dependencias de npm, descomenta y usa esta línea
+          # npm install
 
       - name: Ejecutar el script de consolidación
         run: node tu_script.js # Asegúrate de que este sea el nombre correcto de tu script
