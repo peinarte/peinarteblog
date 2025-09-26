@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Clonar el repositorio y configurar Git
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.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 }}
         run: |
           git clone https://x-access-token:${{ secrets.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 }}@github.com/${{ github.repository }}.git .
           git config --local user.email "action@github.com"
@@ -27,7 +27,7 @@ jobs:
 
       - name: Subir el archivo articles.json actualizado
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.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 }}
         run: |
           git add articles.json
           git commit -m "Automatizado: Consolidar archivos JSON" || echo "No hay cambios para hacer commit"
