@@ -1,10 +1,82 @@
 [
   {
-    "title": "Peinados Ejecutivos: ¡Elegancia al instante!",
-    "date": "8 September, 2025",
-    "image": "https://subnp.com/api/image/1f140129-ea87-4018-a98f-d27ccca03afc",
-    "summary": "Hola, amantes de la elegancia!...",
-    "filename": "peinados ejecutivos_ ¡elegancia al instante!.html",
-    "category": "Peinados Elegantes y Profesionales"
+    "date": "\"date\":\"2025-09-24\",",
+    "image": "https://drive.google.com/file/d/1axRvebpWOA7RNTzIwxZulxfLT-muib8U",
+    "title": "Capas Medias: ¡Volumen y Estilo!",
+    "summary": "Dale a tu cabello mediano un cambio de imagen con este peinado en capas.  Lleno de textura y movimiento, ¡será tu look favorito! #PeinadosEnCapas #CabelloMediano #CorteDePelo #Volumen #HairStyle",
+    "category": "Peinados Medianos en Capas",
+    "filename": "\"filename\":\"capas-medias-volumen-y-estilo-.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/el-peinado-chic-que-amaras-cada-d-a.png",
+    "title": "El Peinado Chic que Amaras Cada Día",
+    "summary": "Descubre cómo lograr un look impecable y elegante en solo minutos con este peinado versátil y fácil de hacer. Ideal para tu rutina diaria, te hará sentir segura y radiante sin complicaciones. ¡Eleva tu estilo sin sacrificar tu tiempo!",
+    "category": "Peinados Fáciles para Todos los Días",
+    "filename": "\"filename\":\"el-peinado-chic-que-amaras-cada-d-a.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/el-updo-chic-que-todas-querr-n-para-tu-pr-xima-fiesta.png",
+    "title": "El Updo Chic que Todas Querrán para tu Próxima Fiesta",
+    "summary": "¿Lista para deslumbrar? Este sofisticado updo con trenzas es la elección perfecta para cualquier evento nocturno. Combina elegancia y un toque moderno para que seas el centro de todas las miradas. ¡Inspírate y brilla con un peinado inolvidable! #PeinadoDeNoche #UpdoElegante #FiestaGlam #EstiloDeGala #PeinadosParaEventos",
+    "category": "Peinados de Noche y Fiesta",
+    "filename": "\"filename\":\"el-updo-chic-que-todas-querr-n-para-tu-pr-xima-fiesta.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/elegancia-ejecutiva-tu-peinado-impecable.png",
+    "title": "Elegancia Ejecutiva: Tu Peinado Impecable",
+    "summary": "Eleva tu estilo con este peinado sofisticado y profesional, perfecto para destacar en cualquier entorno laboral. Este look te asegura una imagen impecable, transmitiendo confianza y autoridad desde tu cabello. ¡Inspira éxito cada día! #PeinadosProfesionales #EstiloEjecutivo #MoñoBajo #EleganciaLaboral #HairInspo",
+    "category": "Peinados Elegantes y Profesionales",
+    "filename": "\"filename\":\"elegancia-ejecutiva-tu-peinado-impecable.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/melena-media-a-capas-volumen-y-estilo-.png",
+    "title": "Melena Media a Capas: ¡Volumen y Estilo!",
+    "summary": "Descubre la versatilidad de la melena media a capas, un corte que aporta volumen, movimiento y un toque moderno a tu estilo. ¡Es perfecto para renovar tu look y sentirte fabulosa! Inspírate con esta tendencia que nunca pasa de moda. #PeinadosMedianos #CorteEnCapas #MelenaMedia #EstiloFemenino #TendenciasCabello",
+    "category": "Peinados Medianos en Capas",
+    "filename": "\"filename\":\"melena-media-a-capas-volumen-y-estilo-.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/mo-o-bajo-chic-tu-estilo-profesional.png",
+    "title": "Moño Bajo Chic: Tu Estilo Profesional",
+    "summary": "Eleva tu look de oficina con este moño bajo impecable. Perfecto para reuniones importantes o el día a día laboral, te verás siempre sofisticada y lista para triunfar. ¡Inspírate y domina tu estilo! #PeinadosProfesionales #EstiloDeOficina #MoñoBajo #HairElegance #LookProfesional",
+    "category": "Peinados Elegantes y Profesionales",
+    "filename": "\"filename\":\"mo-o-bajo-chic-tu-estilo-profesional.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-25\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/peinados-2025-el-futuro-de-la-moda-capilar-.png",
+    "title": "Peinados 2025: ¡El Futuro de la Moda Capilar!",
+    "summary": "Inspírate con las tendencias más futuristas en peinados para el 2025.  Descubre cortes y estilos innovadores que te harán lucir única. ¡Dale un giro radical a tu look! #Peinados2025 #TendenciasCapilares #FuturoDeLaModa #AvantGardeHair #HairFashion",
+    "category": "Tendencias 2025 en Peinados",
+    "filename": "\"filename\":\"peinados-2025-el-futuro-de-la-moda-capilar-.html\""
+  },
+  {
+    "date": "\"date\":\"2025-09-24\",",
+    "image": "https://drive.google.com/file/d/1WLKqbRmfYHzQcAMJqhTb-UYXxc2jFX2Q",
+    "title": "Peinados Elegantes para el Trabajo",
+    "summary": "Impresiona con un look profesional y sofisticado.  Estos peinados fáciles de copiar te ayudarán a lucir elegante y segura en tu día a día. ¡Encuentra tu estilo ideal! #PeinadosProfesionales #PeloElegante #BellezaCorporativa #HairStyle #OficinaChic",
+    "category": "Peinados Elegantes y Profesionales",
+    "filename": "\"filename\":\"peinados-elegantes-para-el-trabajo.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/peinados-largos-que-hipnotizan.png",
+    "title": "Peinados Largos que Hipnotizan",
+    "summary": "Descubre la magia de los peinados para cabello largo con estas ideas deslumbrantes. Crea looks románticos y sofisticados que te harán sentir espectacular en cualquier ocasión. ¡Tu melena merece brillar!\n#PeinadosPeloLargo #CabelloLargo #EstilosDePelo #InspiracionPeinados #TrenzasBoho",
+    "category": "Peinados para Cabello Largo",
+    "filename": "\"filename\":\"peinados-largos-que-hipnotizan.html\""
+  },
+  {
+    "date": "\"date\": \"YYYY-09-26\"",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/trenzas-bohemias-peinado-largo-de-ensue-o.png",
+    "title": "Trenzas Bohemias: Peinado Largo de Ensueño",
+    "summary": "Transforma tu melena con este peinado largo de ensueño, un romántico updo de trenzas bohemias perfecto para bodas, eventos especiales o simplemente para sentirte radiante. Inspírate con la elegancia natural y el encanto etéreo de este estilo. ¡Guárdalo para tu próxima ocasión! #PeinadosLargo #TrenzasBohemias #UpdoRomantico #CabelloLargo #InspiraciónBodas",
+    "category": "Peinados para Cabello Largo",
+    "filename": "\"filename\":\"trenzas-bohemias-peinado-largo-de-ensue-o.html\""
   }
 ]
