@@ -11,24 +11,17 @@ jobs:
   update-articles:
     runs-on: ubuntu-latest
     steps:
-      - name: Clonar el repositorio y configurar
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          git clone https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git .
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Instalar Node.js
-        run: |
-          # Ubuntu ya tiene Node.js, pero esta línea se asegura de que esté en el PATH
-          # Si necesitas una versión específica, puedes buscar los comandos para instalarla.
-          echo 'Node.js ya está disponible en el runner'
-
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Puedes cambiar esto por la versión que necesites
+          
       - name: Instalar dependencias
-        run: |
-          # Si tu script tiene dependencias de npm, ejecútalo
-          # npm install
+        # Si tu script tiene dependencias de npm, descomenta y usa esta línea
+        # run: npm install
 
       - name: Ejecutar el script de consolidación
         run: node tu_script.js # Asegúrate de que este sea el nombre correcto de tu script
@@ -37,6 +30,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add articles.json
           git commit -m "Automatizado: Consolidar archivos JSON" || echo "No hay cambios para hacer commit"
           git push
