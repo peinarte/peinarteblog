@@ -3,36 +3,32 @@ name: Consolidar Artículos JSON
 on:
   push:
     branches:
-      - main # Cambia 'main' si usas otra rama, como 'master'
+      - main
     paths:
       - 'articulos/*.json'
 
 jobs:
   update-articles:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # This grants the necessary write permissions
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20' # Puedes cambiar esto por la versión que necesites
-          
-      - name: Instalar dependencias
+      - name: Clonar el repositorio y configurar Git
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          # Si tu script tiene dependencias de npm, descomenta y usa esta línea
-          # npm install
-
+          git clone https://x-access-token:${{ secrets.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 }}@github.com/${{ github.repository }}.git .
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          
       - name: Ejecutar el script de consolidación
-        run: node build-articles.js # <-- ¡Aquí está la corrección!
+        run: node build-articles.js
 
       - name: Subir el archivo articles.json actualizado
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           git add articles.json
           git commit -m "Automatizado: Consolidar archivos JSON" || echo "No hay cambios para hacer commit"
           git push
