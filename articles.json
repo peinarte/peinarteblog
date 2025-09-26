@@ -1,26 +1,18 @@
 [
   {
-    "date": "\"YYYY-09-14\",",
-    "image": "https://subnp.com/api/image/214f0c06-967f-472b-bd40-9fc7f727f8ca",
-    "title": "Capas Medias: ¡Peinado Perfecto!",
-    "summary": "Dale movimiento y volumen a tu cabello con este corte en capas medias.  Un estilo versátil y favorecedor para cualquier ocasión. ¡Encuentra tu look ideal! #PeinadosEnCapas #CabelloMedio #CorteDePelo #PeinadoModerno #HairStyle",
+    "date": "\"date\":\"2025-09-24\",",
+    "image": "https://drive.google.com/file/d/1axRvebpWOA7RNTzIwxZulxfLT-muib8U",
+    "title": "Capas Medias: ¡Volumen y Estilo!",
+    "summary": "Dale a tu cabello mediano un cambio de imagen con este peinado en capas.  Lleno de textura y movimiento, ¡será tu look favorito! #PeinadosEnCapas #CabelloMediano #CorteDePelo #Volumen #HairStyle",
     "category": "Peinados Medianos en Capas",
-    "filename": "capas medias: ¡peinado perfecto!-2025-09-15T00:37:22.486Z.html"
+    "filename": "\"filename\":\"capas-medias-volumen-y-estilo-.html\""
   },
   {
-    "date": "\"date\":\"2025-09-14\",",
-    "image": "https://subnp.com/api/image/386f6dd1-0aef-482a-a253-935c72c24c78",
-    "title": "Peinados que Imponen: Elegancia Profesional",
-    "summary": "Potencia tu imagen con estos peinados elegantes y profesionales. ¡Descubre el look perfecto que te hará brillar en tu carrera! #PeinadosProfesionales #LookEjecutiva #HairStyle #BellezaCorporativa #ÉxitoFemenino",
+    "date": "\"date\":\"2025-09-24\",",
+    "image": "https://drive.google.com/file/d/1WLKqbRmfYHzQcAMJqhTb-UYXxc2jFX2Q",
+    "title": "Peinados Elegantes para el Trabajo",
+    "summary": "Impresiona con un look profesional y sofisticado.  Estos peinados fáciles de copiar te ayudarán a lucir elegante y segura en tu día a día. ¡Encuentra tu estilo ideal! #PeinadosProfesionales #PeloElegante #BellezaCorporativa #HairStyle #OficinaChic",
     "category": "Peinados Elegantes y Profesionales",
-    "filename": "peinados-que-imponen-elegancia-profesional.html"
-  },
-  {
-    "title": "Publicación de prueba",
-    "date": "14 September, 2025",
-    "image": "https://example.com/imagen.jpg",
-    "summary": "Este es un artículo de prueba para verificar el despliegue.",
-    "filename": "test.html",
-    "category": "Prueba"
+    "filename": "\"filename\":\"peinados-elegantes-para-el-trabajo.html\""
   }
 ]
