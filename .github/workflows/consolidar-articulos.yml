@@ -25,7 +25,7 @@ jobs:
           # npm install
 
       - name: Ejecutar el script de consolidación
-        run: node tu_script.js # Asegúrate de que este sea el nombre correcto de tu script
+        run: node build-articles.js # <-- ¡Aquí está la corrección!
 
       - name: Subir el archivo articles.json actualizado
         env:
