@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'articulos/*.json'
+      - 'articulos/*.html'
 
 jobs:
   update-articles:
@@ -14,27 +14,31 @@ jobs:
       contents: write 
     steps:
       - name: 1. Checkout repository (Obtener el código)
-        uses: actions/checkout@v4 
+        uses: actions/checkout@v4
+        with:
+          # Usamos el token para poder hacer push más adelante
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 2. Setup Node.js (Configurar entorno)
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm' # Añade caché para acelerar futuras ejecuciones
+
+      - name: 3. Instalar dependencias
+        run: npm install
           
-      - name: 3. Ejecutar el script de consolidación
+      - name: 4. Ejecutar el script de consolidación
         run: node build-articles.js
 
-      - name: 4. Subir el archivo articles.json actualizado
+      - name: 5. Subir el archivo articles.json actualizado
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # Halar la última versión de la rama antes de hacer el commit y el push.
-          git pull
-          
           git add articles.json
           
-          # El '|| echo' previene que el flujo falle si no hay cambios.
-          git commit -m "Automatizado: Consolidar archivos JSON" || echo "No hay cambios para hacer commit"
+          # Solo hace commit si hay cambios en articles.json
+          git diff --quiet --staged || git commit -m "Automatizado: Actualizar articles.json"
           
           git push
