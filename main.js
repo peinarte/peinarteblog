@@ -55,6 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const renderArticleCard = (article) => {
+        // Manejo de fechas inválidas para evitar que la página se rompa
+        const date = new Date(article.date);
+        const dateString = !isNaN(date)
+            ? date.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })
+            : 'Fecha no disponible';
+
         return `
             <div class="bg-white rounded-lg shadow-xl overflow-hidden transition-transform duration-300 hover:scale-105">
                 <a href="articulos/${article.filename}">
@@ -64,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3 class="text-xl font-bold mb-2">
                         <a href="articulos/${article.filename}" class="hover:text-purple-600">${article.title}</a>
                     </h3>
-                    <p class="text-gray-600 text-sm">${new Date(article.date).toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+                    <p class="text-gray-600 text-sm">${dateString}</p>
                     <p class="text-gray-700 mt-4 text-base line-clamp-3">${article.summary}</p>
                     <a href="articulos/${article.filename}" class="mt-4 inline-block text-purple-600 font-semibold hover:underline">
                         Leer más &rarr;
@@ -72,25 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
         `;
-    };
-
-    const getArticleCategory = (title) => {
-        const titleLower = title.toLowerCase();
-        if (titleLower.includes("noche") || titleLower.includes("fiesta") || titleLower.includes("deslumbran") || titleLower.includes("elegancia irresistible") || titleLower.includes("elegancia radiante")) {
-            return "Peinados de Noche y Fiesta";
-        } else if (titleLower.includes("elegante") || titleLower.includes("profesional") || titleLower.includes("ejecutivos") || titleLower.includes("trabajo") || titleLower.includes("negocios") || titleLower.includes("poderosa") || titleLower.includes("impecable")) {
-            return "Peinados Elegantes y Profesionales";
-        } else if (titleLower.includes("fácil") || titleLower.includes("sencillos") || titleLower.includes("coleta") || titleLower.includes("moño") || titleLower.includes("día") || titleLower.includes("minutos")) {
-            return "Peinados Fáciles para Todos los Días";
-        } else if (titleLower.includes("capas") || titleLower.includes("medias") || titleLower.includes("corte")) {
-            return "Peinados Medianos en Capas";
-        } else if (titleLower.includes("largo") || titleLower.includes("trenzas")) {
-            return "Peinados para Cabello Largo";
-        } else if (titleLower.includes("2025") || titleLower.includes("futuro") || titleLower.includes("moda capilar") || titleLower.includes("tendencias")) {
-            return "Tendencias 2025 en Peinados";
-        } else {
-            return "Otros";
-        }
     };
 
     const loadArticles = async () => {
@@ -110,15 +97,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             // Render Recent Articles (top 5)
-            recentArticlesContainer.innerHTML = '';
-            articles.slice(0, 5).forEach(article => {
-                recentArticlesContainer.innerHTML += renderArticleCard(article);
-            });
+            if (recentArticlesContainer) {
+                recentArticlesContainer.innerHTML = articles.slice(0, 5).map(renderArticleCard).join('');
+            }
 
             // Group articles by category and render sections
             const articlesByCategory = {};
             articles.forEach(article => {
-                const category = getArticleCategory(article.title); // Use the JS function to assign category
+                // Usamos la categoría que viene directamente del JSON. ¡Mucho mejor!
+                const category = article.category || "Otros";
                 if (!articlesByCategory[category]) {
                     articlesByCategory[category] = [];
                 }
@@ -137,25 +124,30 @@ document.addEventListener('DOMContentLoaded', () => {
             ];
 
             // Populate categories dropdown
-            const categoriesDropdownContainer = categoriesDropdown.querySelector('.py-1');
-            categoryOrder.forEach(categoryName => {
-                if (articlesByCategory[categoryName] && articlesByCategory[categoryName].length > 0) {
-                    const categorySlug = slugify(categoryName);
-                    const link = document.createElement('a');
-                    link.href = `categorias/${categorySlug}.html`;
-                    link.textContent = categoryName;
-                    link.className = 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100';
-                    link.setAttribute('role', 'menuitem');
-                    categoriesDropdownContainer.appendChild(link);
+            if (categoriesDropdown) {
+                const categoriesDropdownContainer = categoriesDropdown.querySelector('.py-1');
+                if (categoriesDropdownContainer) categoriesDropdownContainer.innerHTML = ''; // Clear previous
+                if (mobileCategoriesDropdown) mobileCategoriesDropdown.innerHTML = ''; // Clear previous
 
-                    const mobileLink = link.cloneNode(true);
-                    mobileLink.className = 'block text-gray-600 hover:text-gray-900 py-2';
-                    mobileCategoriesDropdown.appendChild(mobileLink);
-                }
-            });
+                categoryOrder.forEach(categoryName => {
+                    if (articlesByCategory[categoryName] && articlesByCategory[categoryName].length > 0) {
+                        const categorySlug = slugify(categoryName);
+                        const link = document.createElement('a');
+                        link.href = `categorias/${categorySlug}.html`;
+                        link.textContent = categoryName;
+                        link.className = 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100';
+                        link.setAttribute('role', 'menuitem');
+                        categoriesDropdownContainer.appendChild(link);
+
+                        const mobileLink = link.cloneNode(true);
+                        mobileLink.className = 'block text-gray-600 hover:text-gray-900 py-2';
+                        mobileCategoriesDropdown.appendChild(mobileLink);
+                    }
+                });
+            }
 
 
-            categorySectionsContainer.innerHTML = ''; // Clear previous content
+            if (categorySectionsContainer) categorySectionsContainer.innerHTML = ''; // Clear previous content
 
             categoryOrder.forEach(categoryName => {
                 const categoryArticles = articlesByCategory[categoryName];
@@ -166,22 +158,28 @@ document.addEventListener('DOMContentLoaded', () => {
                     categorySection.innerHTML = `
                         <h2 class="text-3xl font-bold mb-4">${categoryName}</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            ${categoryArticles.slice(0, 5).map(renderArticleCard).join('')}
+                            ${categoryArticles.slice(0, 3).map(renderArticleCard).join('')}
                         </div>
                         <div class="text-center mt-8">
                             <a href="categorias/${categorySlug}.html" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
-                                Ver más ${categoryName} &rarr;
+                                Ver más en ${categoryName} &rarr;
                             </a>
                         </div>
                     `;
-                    categorySectionsContainer.appendChild(categorySection);
+                    if (categorySectionsContainer) {
+                        categorySectionsContainer.appendChild(categorySection);
+                    }
                 }
             });
 
         } catch (error) {
             console.error('Error al cargar los artículos:', error);
-            recentArticlesContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los artículos. Por favor, asegúrate de que el archivo articles.json existe y es válido.</p>';
-            latestArticleLink.innerText = 'Error al cargar artículos';
+            if (recentArticlesContainer) {
+                recentArticlesContainer.innerHTML = '<p class="text-center text-red-500">No se pudieron cargar los artículos. Por favor, asegúrate de que el archivo articles.json existe y es válido.</p>';
+            }
+            if (latestArticleLink) {
+                latestArticleLink.innerText = 'Error al cargar artículos';
+            }
         }
     };
 

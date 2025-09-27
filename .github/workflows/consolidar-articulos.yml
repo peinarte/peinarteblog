@@ -1,0 +1,40 @@
+name: Consolidar Artículos JSON
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'articulos/*.json'
+
+jobs:
+  update-articles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+    steps:
+      - name: 1. Checkout repository (Obtener el código)
+        uses: actions/checkout@v4 
+
+      - name: 2. Setup Node.js (Configurar entorno)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          
+      - name: 3. Ejecutar el script de consolidación
+        run: node build-articles.js
+
+      - name: 4. Subir el archivo articles.json actualizado
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          # Halar la última versión de la rama antes de hacer el commit y el push.
+          git pull
+          
+          git add articles.json
+          
+          # El '|| echo' previene que el flujo falle si no hay cambios.
+          git commit -m "Automatizado: Consolidar archivos JSON" || echo "No hay cambios para hacer commit"
+          
+          git push
