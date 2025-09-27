@@ -40,12 +40,36 @@
     "url": "articulos/mo-o-bajo-chic-tu-estilo-profesional.html"
   },
   {
+    "title": "Ondas Naturales que Enamoran",
+    "summary": "¿Quién dijo que para lucir espectacular necesitas horas frente al espejo? En PeinArte creemos que la belleza reside en la simplicidad, y hoy te traemos el secreto para unas ondas naturales que robarán miradas y corazones. Prepárate para enamorarte de tu cabello, ¡y de ti misma!",
+    "image": "https://raw.githubusercontent.com/peinarte/peinarteblog/main/image/articulos/ondas-naturales-que-enamoran.png",
+    "date": "2025-09-26",
+    "filename": "ondas-naturales-que-enamoran.html",
+    "url": "articulos/ondas-naturales-que-enamoran.html"
+  },
+  {
+    "title": "Peinado 2025: Lujo Minimalista",
+    "summary": "¡Hola, PeinArte Lovers! Prepárense para deslumbrar en 2025 con la tendencia que redefine la elegancia: el Lujo Minimalista. Este estilo celebra la belleza de lo sencillo, ofreciendo un look pulcro, sofisticado y absolutamente chic que te hará sentir como una estrella sin esfuerzo. ¡Es hora de abrazar la sofisticación discreta!",
+    "image": "https://github.com/peinarte/peinarteblog/blob/main/image/articulos/peinado-2025-lujo-minimalista.png",
+    "date": "2025-09-26",
+    "filename": "peinado-2025-lujo-minimalista.html",
+    "url": "articulos/peinado-2025-lujo-minimalista.html"
+  },
+  {
     "title": "Peinados Largos que Hipnotizan",
     "summary": "¡Hola, amantes de las melenas espectaculares! En PeinArte sabemos que el cabello largo es un lienzo infinito para la creatividad, y hoy vamos a desvelar esos peinados que no solo capturan miradas, sino que las hipnotizan. Prepárate para transformar tu melena en una obra de arte digna de admiración.",
     "image": "https://raw.githubusercontent.com/peinarte/peinarteblog/main/image/articulos/peinados-largos-que-hipnotizan.png",
     "date": "2025-09-26",
     "filename": "peinados-largos-que-hipnotizan.html",
     "url": "articulos/peinados-largos-que-hipnotizan.html"
+  },
+  {
+    "title": "Trenza Cascada Romántica: El Peinado de tus Sueños",
+    "summary": "¿Buscas un peinado que combine la elegancia de una trenza con la fluidez de una cascada de cabello? La trenza cascada romántica es justo lo que necesitas para ese toque etéreo y soñador. Prepárate para enamorarte de este look que transformará tu cabello largo en una obra de arte, perfecto para cualquier ocasión especial o simplemente para sentirte fabulosa.",
+    "image": "https://raw.githubusercontent.com/peinarte/peinarteblog/main/image/articulos/trenza-cascada-rom-ntica-el-peinado-de-tus-sue-os.png",
+    "date": "2025-09-26",
+    "filename": "trenza-cascada-rom-ntica-el-peinado-de-tus-sue-os.html",
+    "url": "articulos/trenza-cascada-rom-ntica-el-peinado-de-tus-sue-os.html"
   },
   {
     "title": "Trenzas Bohemias: Peinado Largo de Ensueño",
