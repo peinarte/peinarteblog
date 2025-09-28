@@ -24,10 +24,11 @@
             <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
                 ¡Gracias por Suscribirte!
             </h1>
-            <p class="text-lg text-gray-600 mb-8">
+            <p id="thank-you-message" class="text-lg text-gray-600 mb-8">
                 Has sido añadido a nuestra comunidad. Pronto recibirás las mejores tendencias y consejos de peinados.
             </p>
-            <a href="/" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
+            <!-- Este enlace se mostrará si la descarga automática falla o para volver al blog -->
+            <a id="fallback-link" href="/" class="inline-block bg-purple-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">
                 Volver al Blog
             </a>
         </div>
@@ -39,16 +40,29 @@
             const fileToDownload = urlParams.get('file');
 
             if (fileToDownload) {
+                const thankYouMessage = document.getElementById('thank-you-message');
+                const fallbackLink = document.getElementById('fallback-link');
+
                 // Construye la ruta al PDF
                 const pdfPath = `/downloads/pdfs/${fileToDownload}.pdf`;
 
-                // Crea un enlace temporal para iniciar la descarga
+                // Actualiza los mensajes para el usuario
+                thankYouMessage.innerHTML = `¡Gracias! Tu descarga comenzará en breve. Si no es así, puedes usar el botón de abajo.`;
+                fallbackLink.href = pdfPath;
+                fallbackLink.textContent = 'Descargar ahora';
+                fallbackLink.download = `${fileToDownload}.pdf`; // Atributo para forzar la descarga
+
+                // Intenta la descarga automática
                 const link = document.createElement('a');
                 link.href = pdfPath;
-                link.download = `${fileToDownload}.pdf`; // Nombre que tendrá el archivo al descargar
+                link.download = `${fileToDownload}.pdf`;
                 document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                
+                // Usamos un pequeño retraso para darle tiempo al navegador a procesar la redirección
+                setTimeout(() => {
+                    link.click();
+                    document.body.removeChild(link);
+                }, 100);
             }
         });
     </script>
