@@ -44,9 +44,19 @@
                 const fallbackLink = document.getElementById('fallback-link');
                 const githubUser = 'peinarte';
                 const githubRepo = 'peinarteblog';
+                let pdfFileName = '';
+
+                // Mapea el parámetro 'file' al nombre de archivo correcto (sensible a mayúsculas)
+                if (fileToDownload === 'guia-peinados-fiestas') {
+                    pdfFileName = 'guia-peinados-fiestas.pdf';
+                } else if (fileToDownload === 'checklist-cuidado-capilar') {
+                    pdfFileName = 'Checklist-Cuidado-Capilar.pdf';
+                } else if (fileToDownload === 'calendario-peinados') {
+                    pdfFileName = 'Calendario-Peinados.pdf';
+                }
 
                 // Construye la URL directa al archivo en GitHub
-                const githubPdfUrl = `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/downloads/pdfs/${fileToDownload}.pdf`;
+                const githubPdfUrl = `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/downloads/pdfs/${pdfFileName}`;
 
                 // Actualiza los mensajes para el usuario
                 thankYouMessage.innerHTML = `¡Gracias! Tu regalo está listo. Haz clic en el botón de abajo para descargarlo directamente.`;
