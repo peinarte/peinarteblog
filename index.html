@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PeinArte | Blog de Peinados</title>
+    <meta name="p:domain_verify" content="7d6016551b2e59811b8df6aba369904b"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
@@ -82,6 +83,32 @@
             <!-- Las secciones de categorías se generarán aquí por JavaScript -->
         </div>
     </main>
+
+    <!-- Newsletter Subscription Section -->
+    <section class="bg-purple-50 py-12">
+        <div class="container mx-auto px-4 text-center max-w-2xl">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">¡Únete a Nuestra Comunidad!</h2>
+            <p class="text-lg text-gray-600 mb-6">
+                Suscríbete a nuestro newsletter y recibe los últimos artículos, tutoriales y ofertas exclusivas directamente en tu correo.
+            </p>
+            <form name="newsletter" method="POST" data-netlify="true" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <input type="hidden" name="form-name" value="newsletter" />
+                <input 
+                    type="email" 
+                    name="email"
+                    placeholder="Tu correo electrónico" 
+                    required
+                    class="w-full sm:w-auto flex-grow px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-shadow"
+                >
+                <button 
+                    type="submit"
+                    class="w-full sm:w-auto bg-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+                >
+                    Suscribirme
+                </button>
+            </form>
+        </div>
+    </section>
 
     <footer class="bg-gray-800 text-white text-center py-8 mt-12">
         <div class="container mx-auto px-4">
