@@ -23,7 +23,7 @@
                 <span class="text-3xl font-bold text-gray-900">PeinArte</span>
             </a>
             <!-- Navegación para Escritorio -->
-            <nav class="hidden md:flex items-center space-x-2">
+            <nav class="hidden lg:flex items-center space-x-2">
                 <a href="/" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Blog</a>
                 <!-- Menú de Categorías para Escritorio -->
                 <div id="categories-menu" class="relative">
@@ -38,9 +38,21 @@
                     </div>
                 </div>
                 <a href="https://numehair.com/paul-coronel" target="_blank" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md transition-colors duration-200">Tienda</a>
+                <!-- Formulario de Newsletter en Header (Desktop) -->
+                <form name="newsletter-header" method="POST" data-netlify="true" class="items-center hidden lg:flex ml-4">
+                    <input type="hidden" name="form-name" value="newsletter-header" />
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder="Tu correo..." 
+                        required
+                        class="px-2 py-1 rounded-l-md border border-gray-300 text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none"
+                    >
+                    <button type="submit" class="bg-purple-600 text-white font-bold py-1 px-3 rounded-r-md text-sm hover:bg-purple-700 transition-colors">Suscribirse</button>
+                </form>
             </nav>
             <!-- Botón de Menú para Móvil -->
-            <div class="md:hidden">
+            <div class="lg:hidden">
                 <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
                     <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -49,10 +61,21 @@
             </div>
         </div>
         <!-- Menú para Móvil -->
-        <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-1">
+        <div id="mobile-menu" class="hidden lg:hidden px-4 pt-2 pb-4 space-y-1">
             <a href="/" class="block text-gray-600 hover:text-gray-900 py-2">Blog</a>
             <div id="mobile-categories-dropdown"></div>
             <a href="https://numehair.com/paul-coronel" target="_blank" class="block text-gray-600 hover:text-gray-900 py-2">Tienda</a>
+            <!-- Formulario de Newsletter en Header (Mobile) -->
+            <div class="pt-4 mt-4 border-t border-gray-200">
+                <form name="newsletter-header-mobile" method="POST" data-netlify="true" class="flex flex-col gap-2">
+                    <input type="hidden" name="form-name" value="newsletter-header-mobile" />
+                    <label class="text-sm font-semibold text-gray-700">Únete al Newsletter:</label>
+                    <div class="flex">
+                        <input type="email" name="email" placeholder="Tu correo electrónico" required class="flex-grow px-3 py-2 rounded-l-md border border-gray-300 text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none">
+                        <button type="submit" class="bg-purple-600 text-white font-bold py-2 px-4 rounded-r-md text-sm hover:bg-purple-700 transition-colors">OK</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </header>
 
@@ -84,36 +107,23 @@
         </div>
     </main>
 
-    <!-- Newsletter Subscription Section -->
-    <section class="bg-purple-50 py-12">
-        <div class="container mx-auto px-4 text-center max-w-2xl">
-            <h2 class="text-3xl font-extrabold text-gray-900 mb-3">¡Únete a Nuestra Comunidad!</h2>
-            <p class="text-lg text-gray-600 mb-6">
-                Suscríbete a nuestro newsletter y recibe los últimos artículos, tutoriales y ofertas exclusivas directamente en tu correo.
-            </p>
-            <form name="newsletter" method="POST" data-netlify="true" class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <input type="hidden" name="form-name" value="newsletter" />
-                <input 
-                    type="email" 
-                    name="email"
-                    placeholder="Tu correo electrónico" 
-                    required
-                    class="w-full sm:w-auto flex-grow px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-shadow"
-                >
-                <button 
-                    type="submit"
-                    class="w-full sm:w-auto bg-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
-                    Suscribirme
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="bg-gray-800 text-white text-center py-8 mt-12">
+    <footer class="bg-gray-800 text-white text-center pt-12 pb-8">
         <div class="container mx-auto px-4">
+            <!-- Newsletter Subscription Section in Footer -->
+            <div class="max-w-2xl mx-auto mb-10">
+                <h2 class="text-3xl font-extrabold text-white mb-3">¡Únete a Nuestra Comunidad!</h2>
+                <p class="text-lg text-gray-300 mb-6">Recibe los últimos artículos y ofertas exclusivas directamente en tu correo.</p>
+                <form name="newsletter-footer" method="POST" data-netlify="true" class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <input type="hidden" name="form-name" value="newsletter-footer" />
+                    <input type="email" name="email" placeholder="Tu correo electrónico" required class="w-full sm:w-auto flex-grow px-4 py-3 rounded-md border border-gray-600 bg-gray-700 text-white focus:ring-2 focus:ring-purple-500 focus:border-purple-500 outline-none transition-shadow">
+                    <button type="submit" class="w-full sm:w-auto bg-purple-600 text-white font-bold py-3 px-8 rounded-md shadow-lg hover:bg-purple-700 transition-all duration-300 transform hover:scale-105">Suscribirme</button>
+                </form>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
             <p class="text-sm text-gray-400 mb-2">Como afiliado, gano con las compras que califican. Esto no tiene costo adicional para ti y apoya a PeinArte.</p>
-            <p>&copy; 2024 PeinArte. Todos los derechos reservados.</p>
+            <p>&copy; 2025 PeinArte. Todos los derechos reservados.</p>
+            </div>
         </div>
     </footer>
 
