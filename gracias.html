@@ -42,27 +42,21 @@
             if (fileToDownload) {
                 const thankYouMessage = document.getElementById('thank-you-message');
                 const fallbackLink = document.getElementById('fallback-link');
+                const githubUser = 'peinarte';
+                const githubRepo = 'peinarteblog';
 
-                // Construye la ruta al PDF
-                const pdfPath = `/downloads/pdfs/${fileToDownload}.pdf`;
+                // Construye la URL directa al archivo en GitHub
+                const githubPdfUrl = `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/main/downloads/pdfs/${fileToDownload}.pdf`;
 
                 // Actualiza los mensajes para el usuario
-                thankYouMessage.innerHTML = `¡Gracias! Tu descarga comenzará en breve. Si no es así, puedes usar el botón de abajo.`;
-                fallbackLink.href = pdfPath;
-                fallbackLink.textContent = 'Descargar ahora';
-                fallbackLink.download = `${fileToDownload}.pdf`; // Atributo para forzar la descarga
-
-                // Intenta la descarga automática
-                const link = document.createElement('a');
-                link.href = pdfPath;
-                link.download = `${fileToDownload}.pdf`;
-                document.body.appendChild(link);
-                
-                // Usamos un pequeño retraso para darle tiempo al navegador a procesar la redirección
-                setTimeout(() => {
-                    link.click();
-                    document.body.removeChild(link);
-                }, 100);
+                thankYouMessage.innerHTML = `¡Gracias! Tu regalo está listo. Haz clic en el botón de abajo para descargarlo directamente.`;
+                fallbackLink.href = githubPdfUrl;
+                fallbackLink.textContent = 'Descargar tu regalo';
+                // Añadimos target="_blank" para que la descarga se abra en una nueva pestaña
+                // y el usuario no pierda la página de agradecimiento.
+                fallbackLink.target = '_blank';
+                // Eliminamos el atributo 'download' ya que GitHub se encargará de la descarga.
+                fallbackLink.removeAttribute('download');
             }
         });
     </script>
