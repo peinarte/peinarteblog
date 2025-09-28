@@ -33,5 +33,25 @@
         </div>
     </main>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const fileToDownload = urlParams.get('file');
+
+            if (fileToDownload) {
+                // Construye la ruta al PDF
+                const pdfPath = `/downloads/pdfs/${fileToDownload}.pdf`;
+
+                // Crea un enlace temporal para iniciar la descarga
+                const link = document.createElement('a');
+                link.href = pdfPath;
+                link.download = `${fileToDownload}.pdf`; // Nombre que tendrá el archivo al descargar
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        });
+    </script>
+
 </body>
 </html>
