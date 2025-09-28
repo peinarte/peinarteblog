@@ -67,6 +67,13 @@
                 fallbackLink.target = '_blank';
                 // Eliminamos el atributo 'download' ya que GitHub se encargará de la descarga.
                 fallbackLink.removeAttribute('download');
+
+                // Creamos y añadimos un enlace para volver al blog
+                const homeLink = document.createElement('a');
+                homeLink.href = '/';
+                homeLink.textContent = 'Volver al Blog';
+                homeLink.className = 'block text-sm text-gray-500 mt-6 hover:underline';
+                fallbackLink.parentNode.appendChild(homeLink);
             }
         });
     </script>
