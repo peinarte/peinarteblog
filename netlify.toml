@@ -1,0 +1,6 @@
+# Reglas de redirección para Netlify
+
+[[redirects]]
+  from = "/downloads/*"
+  to = "/gracias.html?file=:splat"
+  status = 200
