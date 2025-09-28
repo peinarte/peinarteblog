@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileCategoriesDropdown = document.getElementById('mobile-categories-dropdown');
+    const searchInput = document.getElementById('search-input');
+    const recentArticlesSectionTitle = document.querySelector('h2.text-3xl.font-bold');
 
     // Back to Top Button Logic
     window.onscroll = () => {
@@ -90,6 +92,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Sort all articles by date (newest first)
             articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            // Setup search listener
+            if (searchInput) {
+                searchInput.addEventListener('input', () => handleSearch(articles));
+            }
 
             // Update latest article link
             if (articles.length > 0) {
